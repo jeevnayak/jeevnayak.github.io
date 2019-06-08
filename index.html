@@ -6,6 +6,7 @@
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
       crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
       const WORDS = [
         "Grass",
@@ -383,12 +384,14 @@
         }
         $("#words").html(wordDivs);
       }
+      $(document).ready(refreshWords);
     </script>
     <style>
       body {
         text-align: center;
       }
       input {
+        font-size: 16px;
         color: rgba(0,0,0,.8);
         padding: .5em 1em;
         background-color: #eaeaea;
@@ -402,6 +405,10 @@
       }
       #words {
         margin-top: 20px;
+        font-size: 24px;
+      }
+      #words div {
+        margin-bottom: 5px;
       }
     </style>
   </head>
